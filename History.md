@@ -1,14 +1,16 @@
-
 0.0.4 / 2016-06-16
 ==================
 
 New features
   * Revise ui (A single function with console-driven UI)
   - maintain reverse compatibility
+  * Add basic tests for reverse compatibility
 
 Documentation
   * Documentation fixes
   * update the format of the code (spacing and such)
+  * Boilerplate cran comments (TODO - run tests and edit these)
+  * Use travis CI for R CMD check
 
 Fixes for CRAN
 
