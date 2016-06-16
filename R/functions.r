@@ -1,3 +1,4 @@
+#' @importFrom graphics locator
 #' @export
 ReadAndCal <- function(fname)
 {
@@ -12,7 +13,7 @@ ReadAndCal <- function(fname)
   return(calpoints)
 }
 
-#' @importFrom graphics plot
+#' @importFrom graphics plot.new par rasterImage
 #' @importFrom readbitmap read.bitmap
 ReadImg <- function(fname)
 {
@@ -23,6 +24,7 @@ ReadImg <- function(fname)
   rasterImage(img, 0, 0, 1, 1)
 }
 
+#' @importFrom graphics locator
 #' @export
 DigitData <- function(col = 'red', type = 'p', ...)
 {
@@ -31,6 +33,7 @@ DigitData <- function(col = 'red', type = 'p', ...)
   locator(type = type, col = col, ...)
 }
 
+#' @importFrom stats lm
 #' @export
 Calibrate <- function(data, calpoints, x1, x2, y1, y2)
 {
@@ -141,6 +144,7 @@ instructCal = function(pt_names) {
 #'
 #' mydata <- digitize(tmp)
 #' }
+#' @importFrom utils flush.console
 #' @export
 digitize <- function(image_filename,
                     ...,
